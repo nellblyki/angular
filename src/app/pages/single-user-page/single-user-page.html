@@ -1,0 +1,8 @@
+<p>single-user-page works! ------- {{ userId }}</p>
+@if (users()) {
+  <div class="rounded-2xl p-4 border border-amber-500">
+    <p>{{ users()?.name }}</p>
+    <p>{{ users()?.phone }}</p>
+    <p>{{ users()?.email }}</p>
+  </div>
+}

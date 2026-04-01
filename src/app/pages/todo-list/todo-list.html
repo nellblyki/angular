@@ -1,0 +1,10 @@
+<p>todo-list works!</p>
+<div>
+    <input type="text" [(ngModel)]="input">
+    <button (click)="addTodo()">Создать</button>
+</div>
+<div>
+    @for (todo of todos(); track $index) {
+        <p>{{todo}}</p>
+    }
+</div>

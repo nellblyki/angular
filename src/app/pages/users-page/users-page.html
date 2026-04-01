@@ -1,0 +1,13 @@
+<div>
+  @for (user of users(); track user.id) {
+    <a routerLink="/users/{{ user.id }}">
+      <div class="grid grid-cols-2n">
+        <div class="rounded-2xl p-4 border border-amber-500 w-max">
+          <p>{{ user.name }}</p>
+          <p>{{ user.phone }}</p>
+          <p>{{ user.email }}</p>
+        </div>
+      </div>
+    </a>
+  }
+</div>

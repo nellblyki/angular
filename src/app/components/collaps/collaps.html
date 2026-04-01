@@ -1,0 +1,6 @@
+<div>
+  <button (click)="toggleCollaps()" class="cursor-pointer">{{ title() }}</button>
+  @if (show()) {
+    <p>{{ text() }}</p>
+  }
+</div>
