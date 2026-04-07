@@ -1,10 +1,22 @@
 <p>todo-list works!</p>
 <div>
-    <input type="text" [(ngModel)]="input">
-    <button (click)="addTodo()">Создать</button>
+  <input class="border p-1 rounded-2xl" type="text" [(ngModel)]="input" />
+  <button (click)="addTodo()" type="submit">Создать</button>
 </div>
 <div>
-    @for (todo of todos(); track $index) {
-        <p>{{todo}}</p>
+  @for (todo of todos(); track $index) {
+    <div class="flex gap-2 border rounded-2xl border-amber-600 w-max p-3 my-3">
+      <p>{{ todo }}</p>
+      <button class="cursor-pointer underline" (click)="deleteTodo(todo)">Удалить</button>
+      <button class="cursor-pointer underline" (click)="startEdit($index, todo)">Изменить</button>
+    </div>
+
+    @if (editingIndex() === $index) {
+      <div class="flex gap-2">
+        <input type="text" [(ngModel)]="editingText" class="border p-1 rounded-2xl" />
+        <button (click)="saveTodo()">Сохранить</button>
+        <button (click)="cancelEdit()">Отмена</button>
+      </div>
     }
+  }
 </div>
