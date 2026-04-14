@@ -1,0 +1,22 @@
+<div class="max-w-125 mx-auto flex flex-col gap-10">
+  <input [(ngModel)]="inputFrom" type="number" placeholder="Введите сумму обмена" />
+  <select [(ngModel)]="valuta">
+    @for (item of Rates() | keyvalue; track $index) {
+      <option [value]="item.key">
+        {{ item.value.name }}
+      </option>
+    }
+  </select>
+  <select [(ngModel)]="valuta2">
+    @for (item of Rates() | keyvalue; track $index) {
+      <option [value]="item.key">
+        {{ item.value.name }}
+      </option>
+    }
+  </select>
+  <input
+    [value]="Result() | currency: `${valuta2().toUpperCase()}` : 'symbol-narrow'"
+    readonly
+    type="text"
+  />
+</div>

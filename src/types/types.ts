@@ -11,3 +11,12 @@ export interface Users {
   phone: string;
   email: string;
 }
+export interface Exchange {
+  date: string;
+  eur: Record<string, number>;
+}
+export interface ExchangeNameRate {
+  name: string;
+  rate: number;
+}
+export type ExchangeApiNew = Record<string, ExchangeNameRate>;

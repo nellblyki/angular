@@ -1,0 +1,48 @@
+<div>
+  <div class="flex justify-center">
+    <div
+      class="flex justify-center items-center w-300 bg-[#00000003] rounded-xl h-[80px] my-10 shadow shadow-[#14142B0A]"
+    >
+      <p class="text-[#170F49] font-medium text-[24px]">Get an Estimate for Workspace</p>
+    </div>
+  </div>
+  <div class="justify-center text-center mb-10">
+    <div class="text-center justify-center">
+      <h3 class="text-[#170F49] text-2xl font-semibold mb-3">Post Your Requirements</h3>
+      <p class="max-w-130 mx-auto text-[18px] text-[#6F6C90]">
+        Please fill the form below to receive a quote for workspace. Please add all the
+        detailsrequired.
+      </p>
+    </div>
+  </div>
+  <form class="w-[700px] mx-auto" (ngSubmit)="clickHandler()">
+    <div class="w-[700px] bg-[#FAF8F8] mx-auto border border-[#EFF0F6] rounded-3xl px-16">
+      <div class="pt-6">
+        <h3 class="text-[#170F49] text-2xl font-semibold mb-3">Contact details</h3>
+        <p class="text-[#6F6C90] text-[18px]">
+          Please fill your information so we can get in touch with you.
+        </p>
+      </div>
+      <div class="w-[500px] h-[1px] mx-auto bg-[#D9DBE9] mb-12 mt-10"></div>
+      <div class="mb-12">
+        <p class="text-[#170F49] text-[18px] font-medium mb-3">Name</p>
+        <app-comp-input type="text" placeHolder="Your Name" (onAction)="name.set($event)" />
+      </div>
+      <div class="mb-12">
+        <p class="text-[#170F49] text-[18px] font-medium mb-3">Phone Number</p>
+        <app-comp-input type="text" placeHolder="(123) 456 - 7890" (onAction)="phone.set($event)" />
+      </div>
+      <div class="mb-12">
+        <p class="text-[#170F49] text-[18px] font-medium mb-3">Email</p>
+        <app-comp-input type="text" placeHolder="Your Mail ID" (onAction)="email.set($event)" />
+      </div>
+      <div class="mb-12">
+        <p class="text-[#170F49] text-[18px] font-medium mb-3">Date</p>
+        <app-comp-input type="text" placeHolder=" dd - mm - yyyy" (onAction)="date.set($event)" />
+      </div>
+    </div>
+    <div class="flex justify-center mt-12">
+      <app-comp-button />
+    </div>
+  </form>
+</div>

@@ -1,4 +1,6 @@
 <div>
+  <p>Сейчас у нас: {{ DateTime() | date: 'dd.mm.yyyy h:mm' }}</p>
+  <p>У вас на счету: {{ 25673541 | currency: 'RUB' : 'symbol-narrow' }}</p>
   @for (user of users(); track user.id) {
     <a routerLink="/users/{{ user.id }}">
       <div class="grid grid-cols-2n">
