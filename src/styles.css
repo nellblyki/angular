@@ -1,3 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+.hint{
+    position: fixed;
+    padding: 15px;
+    max-width: max-content;
+    border-radius: 15px;
+    top: 5%;
+    right: 5%;
+    background-color: blueviolet;
+    animation: hintShow 0.5s;
+}
+.hint.HintBox_Hide {
+    animation: hintHide 0.5s;
+}
+@keyframes hintShow{
+    0%{
+        transform: translate(100px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes hintHide{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translateX(1000px);
+    }
+}

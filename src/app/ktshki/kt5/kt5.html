@@ -1,0 +1,47 @@
+<header>
+  <app-header />
+</header>
+<main class="text-[#21243D]">
+  <div class="flex items-center mt-20 justify-between">
+    <div class="max-w-125 ml-[200px]">
+      <h3 class="text-[#21243D] text-5xl mb-10">
+        Hi, I am John,<br />
+        Creative Technologist
+      </h3>
+      <p class="text-[#21243D]">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+      </p>
+      <button class="py-2 px-4 bg-[#FF6464] text-white font-medium text-xl mt-[47px]">
+        Download Resume
+      </button>
+    </div>
+    <div class="mr-[200px]">
+      <img src="/Ellipse 1.png" alt="" />
+    </div>
+  </div>
+  <div class="bg-[#EDF7FA] pl-[200px] mt-[78px] pr-[200px] pb-8 m-0">
+    <p class="pt-2 pb-8 text-xl">Recent posts</p>
+    <div class="flex justify-between">
+      <app-recent-posts
+        title="Making a design system from scratch"
+        date="12 Feb 2020"
+        name="Design, Pattern"
+        text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      />
+      <app-recent-posts
+        title="Creating pixel perfect icons in Figma"
+        date="12 Feb 2020"
+        name="Figma, Icon Design"
+        text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      />
+    </div>
+  </div>
+  <div class="pl-[200px]">
+    <p class="pt-2 pb-8 text-xl">Featured works</p>
+    <app-works/>
+  </div>
+</main>
+<footer>
+  <app-footer />
+</footer>
