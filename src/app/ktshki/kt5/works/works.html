@@ -1,22 +1,24 @@
-@for (item of cards.slice(0, 3); track $index) {
-  <div class="mb-[31px]">
-    <div class="flex mb-[15px]">
-      <img class="w-[250px] h-[180px]" src="{{ item.main_img }}" alt="" />
-      <div class="ml-4 max-w-100">
-        <div>
-          <h3 class="text-3xl font-bold">{{ item.title }}</h3>
-        </div>
-        <div class="flex items-center gap-5">
-          <p class="border rounded-2xl bg-[#142850] text-white px-[10px] py-[2px]">
-            {{ item.year }}
-          </p>
-          <p class="text-[#8695A4]">{{ item.tags[0] }}</p>
-        </div>
-        <div class="mt-4">
-          <p>{{ item.text }}</p>
+@for (item of cards.slice(0, slice()); track item.id) {
+  <a routerLink="/kt5Work/{{item.id}}">
+    <div class="mb-[31px]">
+      <div class="flex mb-[15px]">
+        <img class="w-[250px] h-[180px]" src="{{ item.main_img }}" alt="" />
+        <div class="ml-4 max-w-100">
+          <div>
+            <h3 class="text-3xl font-bold">{{ item.title }}</h3>
+          </div>
+          <div class="flex items-center gap-5">
+            <p class="border rounded-2xl bg-[#142850] text-white px-[10px] py-[2px]">
+              {{ item.year }}
+            </p>
+            <p class="text-[#8695A4]">{{ item.tags[0] }}</p>
+          </div>
+          <div class="mt-4">
+            <p>{{ item.text }}</p>
+          </div>
         </div>
       </div>
+      <div class="h-[2px] rounded-2xl mr-[200px] bg-[#E0E0E0]"></div>
     </div>
-    <div class="h-[2px] rounded-2xl mr-[200px] bg-[#E0E0E0]"></div>
-  </div>
+  </a>
 }

@@ -1,0 +1,34 @@
+<header>
+  <app-header />
+</header>
+<main class="mx-[200px] max-w-150">
+  @if (cards) {
+    <div>
+      <h1 class="text-[#21243D] text-4xl font-bold mb-8">{{ cards.full_title }}</h1>
+      <div class="flex gap-6">
+        <p class="border rounded-2xl bg-[#FF7C7C] text-white px-[10px] py-[2px]">
+          {{ cards.year }}
+        </p>
+        <p class="text-[#21243D] text-xl">{{ cards.tags }}</p>
+      </div>
+      <p>{{ cards.text }}</p>
+      <img class="max-h-100 mb-10" src="{{ cards.main_img }}" alt="" />
+    </div>
+  }
+  @if (content) {
+    @for (item of content; track $index) {
+      @if (item.includes('h1')) {
+        <h1 class="text-[#21243D] text-3xl font-medium mb-5">{{ item[1] }}</h1>
+      } @else if (item.includes('h2')) {
+        <h2 class="text-[#21243D] text-2xl font-medium mb-5">{{ item[1] }}</h2>
+      } @else if (item.includes('text')) {
+        <p>{{ item[1] }}</p>
+      } @else if (item.includes('img')) {
+        <img src="{{ item[1] }}"/>
+      }
+    }
+  }
+</main>
+<footer>
+  <app-footer />
+</footer>

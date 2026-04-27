@@ -7,6 +7,7 @@ import { ExchangePage } from './pages/exchange-page/exchange-page';
 import { Kt4 } from './ktshki/kt4/kt4';
 import { Kt5 } from './ktshki/kt5/kt5';
 import { WorkPage } from './ktshki/kt5/work-page/work-page';
+import { ThirdPage } from './ktshki/kt5/third-page/third-page';
 
 export const routes: Routes = [
   { path: '', component: IndexPage },
@@ -17,4 +18,5 @@ export const routes: Routes = [
   { path: 'kt4', component: Kt4 },
   { path: 'kt5', component: Kt5 },
   { path: 'kt5Work', component: WorkPage },
+  { path: 'kt5Work/:id', component: ThirdPage },
 ];
